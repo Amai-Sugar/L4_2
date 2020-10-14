@@ -1,0 +1,13 @@
+<h1>新規登録</h1>
+ <%= form_for @user,:url => {controller: "top", action: "create"} do |f| %>
+    <p>
+        <%= f.label :uid, 'ユーザＩＤ' %>
+        <%= f.text_field :uid, class: 'form-control' %>
+    </p>
+    <p>
+        <%= f.label :pass, 'パスワード' %>
+        <%= f.password_field :pass, class: 'form-control' %>
+    </p>
+    <%= f.submit '新規登録'%>
+  <% end %>
+<%= link_to 'ログイン画面', root_path %>
